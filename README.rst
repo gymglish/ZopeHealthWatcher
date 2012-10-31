@@ -40,12 +40,12 @@ You can also install it using `pip` or `easy_install`.
 Configuration
 =============
 
-Once the package is installed, open the ``custom.py`` module located in
-`ZopeHealthWatcher` and change ``ACTIVATED`` and ``SECRET`` values, so
-the tool is activated::
+`ZopeHealthWatcher` looks for the environment variable
+``ZOPE_HEALTH_WATCHER_SECRET``. Set it in buildout::
 
-    ACTIVATED = True
-    SECRET = 'MySuperPass'
+    [instance]
+    environment-vars =
+        ZOPE_HEALTH_WATCHER_SECRET MySuperPass
 
 Usage
 =====
