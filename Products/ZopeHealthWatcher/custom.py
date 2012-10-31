@@ -11,7 +11,8 @@
 # should change the secret or filter this URL before it gets to Zope,
 # for instance in Apache.
 
-ACTIVATED = False
-SECRET = 'secret'
-DUMP_URL = '/manage_zhw'
+import os
 
+SECRET = os.environ.get('ZOPE_HEALTH_WATCHER_SECRET')
+ACTIVATED = bool(SECRET)
+DUMP_URL = '/manage_zhw'
