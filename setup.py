@@ -3,7 +3,7 @@ import os
 from setuptools import setup, find_packages
 
 README = os.path.join(os.path.dirname(__file__),
-                      'README.txt')
+                      'README.rst')
 
 setup(name='ZopeHealthWatcher',
       version='0.4',
